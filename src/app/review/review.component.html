@@ -1,0 +1,64 @@
+
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid text-center text-primary"><h1>{{title}}</h1></div>   
+       <div class="row">
+          
+                <div class="col-xs-6"  style="float:left">
+                  
+                 <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <img img id="chartGraph" src="{{data.imageUrl}}" class="card-img-top" alt="...">
+                          
+                          <div class="a" >
+                             <b> <h5 class="card-title">{{data.name}} </h5></b>
+                              <b>Domain :</b><a href="#" class="stretched-link">{{ data.domain}}</a>
+                               <br>
+                              <b>Product Details:  </b>
+                              <br>
+                              Category : {{ data.category}}
+                              <br>
+                              ProductId : {{data.productId}}
+                              <br>
+                              CreatedAt :{{ data.createdAt}}
+                               <br>
+                              <b>Price :</b>  {{data.price}}
+                              <br>
+                      <button type="button" class="btn btn-primary">ReviewCount: <span class="badge badge-light">{{data.reviewCount}}</span></button>
+                             <br>
+                             <b>LatestReviewDate:</b>{{data.latestReviewDate}}
+                               <br><br>
+                          </div>
+
+                    </div>
+                      </div>
+
+                    </div>
+                   
+                 
+            <div class="col-xs-6 " id="chartGraph1"  >
+                
+                  <div class="card">
+                      <div class="card-body">
+                          <b> <u><h3>{{data.title}}</h3></u></b>
+              <b>TopScores:</b>
+                    <ngx-charts-bar-vertical
+                    [view]="view"
+                    [scheme]="colorScheme"
+                    [results]="scorearray"
+                    [gradient]="gradient"
+                    [xAxis]="showXAxis"
+                    [yAxis]="showYAxis"
+                    [legend]="showLegend"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel">
+                    </ngx-charts-bar-vertical>
+                       </div>
+                   </div>
+            </div>  
+</div>
+      
+</div>
+               
+    

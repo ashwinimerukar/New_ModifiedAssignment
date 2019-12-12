@@ -1,0 +1,17 @@
+#chartGraph{
+    height:200px; 
+    width:300px; 
+    margin-left: 50px;
+}
+
+
+.title-center {
+
+    text-align: center;
+    color: blue;
+      }
+      
+      .a{
+        margin-left: 50px;    
+
+      }
